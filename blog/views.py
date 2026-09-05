@@ -5,6 +5,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import ProfileUpdateForm
 
+def home(request):
+    return render(request, "blog/home.html")
 
 def register(request):
     if request.method == "POST":
